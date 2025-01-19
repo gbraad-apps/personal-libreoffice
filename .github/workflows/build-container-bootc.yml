@@ -19,7 +19,7 @@ jobs:
       - name: Run podman build - LibreOffice (bootc)
         run: |
           podman build -t ghcr.io/gbraad-apps/libreoffice-bootc:latest \
-            --build-arg=BASE_IMAGE="ghcr.io/gbraad-devenv/fedora/rdesktop" \
+            --build-arg=BASE_IMAGE="ghcr.io/gbraad-devenv/fedora/rdesktop-bootc" \
             --build-arg=BASE_VERSION=41 \
             -f Containerfile .
       - name: Push image to ghcr.io - LibreOffice (bootc)
