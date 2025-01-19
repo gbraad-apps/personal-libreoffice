@@ -10,7 +10,7 @@ LibreOffice for private (remote) use
 ## Usage instructions
 
 ```
-$ podman run -d --name obsidian ghcr.io/gbraad-apps/libreoffice:latest
+$ podman run -d --name libreoffice ghcr.io/gbraad-apps/libreoffice:latest
 $ podman exec libreoffice tailscale up
 $ podman exec libreoffice tailscale ip
 ```
