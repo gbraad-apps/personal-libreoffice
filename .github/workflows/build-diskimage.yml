@@ -66,7 +66,7 @@ jobs:
           ${{ env.IMAGE_NAME }}
 
     - name: Compress output result
-      run: sudo gzip ./output/qcow2/disk.qcow2
+      run: sudo bzip2 -z ./output/qcow2/disk.qcow2
     
     - name: Create a GitHub release
       uses: ncipollo/release-action@v1
