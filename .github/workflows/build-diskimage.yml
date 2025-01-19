@@ -65,6 +65,9 @@ jobs:
           --local \
           ${{ env.IMAGE_NAME }}
 
+    - name: Compress output result
+      run: gzip ./output/qcow2/disk.qcow2
+    
     - name: Create a GitHub release
       uses: ncipollo/release-action@v1
       with:
