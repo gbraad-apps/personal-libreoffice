@@ -13,7 +13,7 @@ RUN dnf install -y \
 USER gbraad
 
 # auotstart application
-RUN echo "exec /usr/bin/libreoffice" >> ~/.config/i3/config
+RUN echo "exec /usr/bin/libreoffice" >> $HOME/.config/i3/config
 
 USER root
 # ensure to become root for systemd
