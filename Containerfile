@@ -8,13 +8,9 @@ USER root
 RUN dnf install -y \
         libreoffice \
     && dnf clean all \
-    && rm -rf /var/cache/yum
+    && rm -rf /var/cache/yum \
+    && git config -f /etc/rdesktop/rdesktop.ini rdesktop.title "Personal LibreOffice" \
+    && git config -f /etc/rdesktop/rdesktop.ini rdesktop.exec "/usr/bin/libreoffice"
 
-USER gbraad
-
-# auotstart application
-RUN echo "exec /usr/bin/libreoffice" >> $HOME/.config/i3/config
-
-USER root
 # ensure to become root for systemd
 #ENTRYPOINT ["/sbin/init"]
